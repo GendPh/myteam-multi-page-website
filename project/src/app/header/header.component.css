@@ -1,0 +1,8 @@
+header{
+  #btn-open-nav{
+    display: block;
+    width: 20px;
+    height: 17px;
+    background: url(../../assets/icon/icon-hamburger.svg) no-repeat center/contain;
+  }
+}

@@ -1,0 +1,21 @@
+<div id="mobile-nav" class="fixed inset-0" [ngClass]="{'open': navOpen}" (click)="emitCloseNav()">
+
+  <nav>
+    <button type="button" id="btn-close-nav"></button>
+
+
+    <ul>
+      <li class="mt-[39px]">home</li>
+      <li class="mt-6 mb-9">about</li>
+    </ul>
+
+    <app-button>
+      contact us
+    </app-button>
+
+    <figure class="absolute bottom-0 left-full -translate-x-1/2 block w-[200px] h-[200px]">
+      <img src="../../assets/pattern/bg-pattern-about-1-mobile-nav-1.svg" alt="pattern circle plus lines"
+        class="w-full h-full">
+    </figure>
+  </nav>
+</div>

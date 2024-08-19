@@ -1,0 +1,33 @@
+#mobile-nav {
+  @apply transition-colors duration-200;
+
+  &:not(.open) {
+    @apply pointer-events-none;
+
+    nav {
+      @apply translate-x-full;
+    }
+  }
+
+  &.open {
+    @apply bg-black/50;
+  }
+
+  nav {
+    padding-top: 60px;
+
+    @apply bg-secondary-police-blue px-6 max-w-[255px] ml-auto h-full transition-transform duration-200;
+
+    li {
+      @apply body-text-1;
+    }
+
+    #btn-close-nav {
+      display: block;
+      width: 18px;
+      height: 17px;
+      background: url(../../assets/icon/icon-close.svg) no-repeat center/contain;
+      margin-left: auto;
+    }
+  }
+}
