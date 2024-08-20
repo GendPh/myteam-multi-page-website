@@ -1,0 +1,40 @@
+<section class="overflow-hidden relative">
+
+
+  <figure id="home-patter-1" class="hidden xl:block absolute right-full translate-x-1/2">
+    <img src="../../assets/pattern/bg-pattern-home-1.svg" alt="circle with points squares"
+      class="w-full h-full object-contain">
+  </figure>
+
+  <app-hero-section />
+
+  <div class="relative w-full h-[100px] mt-[197px] md:mt-[256px] lg:mt-[250px] desktop-max-screen">
+    <figure class="absolute bottom-0 left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:right-0 w-[358px]">
+      <img src="../../assets/pattern/bg-pattern-home-2.svg" alt="bg pattern 5lines and 2 circles plus a square"
+        class="">
+    </figure>
+  </div>
+</section>
+
+
+<section class="relative bg-secondary-dark-green px-6 xl:px-0 py-16 md:py-[100px] lg:py-[140px] overflow-hidden">
+
+  <figure
+    class="absolute top-0 right-0 xl:top-auto xl:bottom-0 translate-x-1/2 w-[200px] h-[240px] lg:h-[200px] xl:h-[240px]">
+    <img src="../../assets/pattern/bg-pattern-home-3.svg" alt="circle with lines and a square with dots"
+      class="w-full h-full">
+  </figure>
+
+  <div class="max-w-[573px] lg:max-w-[1110px] mx-auto grid gap-14 md:gap-16  lg:grid-cols-2">
+    <article class="max-w-60 md:max-w-[445px]">
+      <div class="w-[50px] h-1 bg-primary-light-coral mb-8"></div>
+      <h2 class="header-2">Build & manage distributed teams like no one else.</h2>
+    </article>
+
+    <article class="grid gap-12 md:gap-8">
+      <app-skills *ngFor="let skill of skills" [Skill]="skill" />
+    </article>
+  </div>
+
+
+</section>

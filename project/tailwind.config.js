@@ -18,7 +18,10 @@ module.exports = {
           "sacramento-state-green": "#012f34",
           "dark-green": "#002529",
         }
-      }
+      },
+      screens: {
+        'landscape': { 'raw': '(orientation: landscape)' },
+      },
     },
   },
   plugins: [],

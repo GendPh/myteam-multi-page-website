@@ -7,8 +7,10 @@
 
   padding-top: 9px;
   padding-bottom: 11px;
+  padding-left: 32px;
+  padding-right: 33px;
 
-  @apply rounded-3xl border-2 transition-colors duration-200 body-text-1;
+  @apply rounded-3xl border-2 transition-colors duration-200 ;
 
   &.primary-light {
     @apply bg-transparent text-white border-white hover:bg-primary-white hover:text-secondary-dark-green;

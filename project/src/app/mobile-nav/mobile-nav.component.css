@@ -1,5 +1,5 @@
 #mobile-nav {
-  @apply transition-colors duration-200;
+  @apply transition-colors duration-200 z-50;
 
   &:not(.open) {
     @apply pointer-events-none;
@@ -19,7 +19,7 @@
     @apply bg-secondary-police-blue px-6 max-w-[255px] ml-auto h-full transition-transform duration-200;
 
     li {
-      @apply body-text-1;
+      @apply transition-colors duration-200 hover:text-primary-light-coral;
     }
 
     #btn-close-nav {

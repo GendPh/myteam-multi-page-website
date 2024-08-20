@@ -8,12 +8,45 @@
     font-family: 'Livvic', sans-serif;
     @apply bg-primary-midnight-green text-primary-white overflow-x-hidden;
   }
+  li {
+    cursor: pointer;
+  }
 }
 
 @layer components {
+  .desktop-max-screen {
+    @apply max-w-[1110px] mx-auto;
+  }
+
+  .header-1 {
+    @apply text-[40px] leading-[40px] md:text-[64px] md:leading-[56px] lg:text-[100px] lg:leading-[100px] font-bold;
+
+    &.small {
+      @apply lg:text-[64px];
+    }
+  }
+
+  .header-2 {
+    @apply text-[32px] leading-[32px] lg:text-[48px] lg:leading-[48px] font-bold;
+  }
+
   .body-text-1 {
     font-size: 18px;
     line-height: 28px;
     font-weight: 600;
+
+    &.bold {
+      font-weight: 700;
+    }
+
+    &.small {
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+  .body-text-2 {
+    line-height: 28px;
+    font-weight: 600;
+    @apply text-[15px] lg:text-[18px];
   }
 }

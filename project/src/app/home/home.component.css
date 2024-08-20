@@ -1,0 +1,6 @@
+#home-patter-1 {
+  --w: clamp(70px, 13vw, 600px);
+
+  width: var(--w);
+  height: var(--w);
+}
