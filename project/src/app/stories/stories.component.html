@@ -1,0 +1,27 @@
+<div class="relative text-center" *ngIf="isInViewport"
+[ngClass]="{'animate__animated animate__zoomInLeft':isInViewport}">
+
+  <figure class="absolute left-1/2 -translate-x-1/2">
+    <img src="../../assets/icon/icon-quotes.svg" alt="icon quote">
+  </figure>
+
+  <div class="relative pt-9">
+    <p class="body-text-1 small mb-4 lg:mb-6">
+      {{story.quote}}
+    </p>
+
+    <p class="body-text-1 bold text-secondary-rapture-blue mb-[2px]">
+      {{story.name}}
+    </p>
+
+    <p class="body-text-3">
+      {{story.position}}
+    </p>
+
+    <figure class="story-avatar rounded-full mt-4 lg:mt-8">
+      <img src="../../assets/avatar/avatar-{{story.image}}.jpg" alt="icon quote" class="w-full h-full rounded-full">
+    </figure>
+  </div>
+
+
+</div>

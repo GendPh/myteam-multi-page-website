@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+@import 'animate.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Example of setting the variables */
+:root {
+  --speed: 500ms; /* Animation duration */
+  --delay: 700ms; /* Animation delay */
+}
 
 @layer base {
   body {
@@ -10,6 +17,7 @@
   }
   li {
     cursor: pointer;
+    @apply hover:text-primary-light-coral transition-colors duration-200;
   }
 }
 
@@ -49,4 +57,13 @@
     font-weight: 600;
     @apply text-[15px] lg:text-[18px];
   }
+  .body-text-3 {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+
 }
+

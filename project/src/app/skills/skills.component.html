@@ -1,4 +1,5 @@
-<div class="text-center md:text-start flex flex-col md:flex-row gap-4 md:gap-[23px]">
+<div class="text-center md:text-start flex flex-col md:flex-row gap-4 md:gap-[23px]"  *ngIf="isInViewport"
+  [ngClass]="{'animate__animated animate__zoomInRight':isInViewport}">
   <figure class="w-[72px] h-[72px] mx-auto">
     <img src="../../assets/icon/{{skill.icon}}.svg" alt="{{skill.icon}}" class="w-full h-full object-contain">
   </figure>

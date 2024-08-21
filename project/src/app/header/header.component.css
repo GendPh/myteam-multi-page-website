@@ -1,10 +1,5 @@
 header {
-  nav {
-    li {
-      @apply transition-colors duration-200 hover:text-primary-light-coral;
-    }
-  }
-
+ 
   #btn-open-nav {
     display: block;
     width: 20px;

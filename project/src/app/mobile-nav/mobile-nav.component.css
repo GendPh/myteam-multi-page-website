@@ -18,9 +18,6 @@
 
     @apply bg-secondary-police-blue px-6 max-w-[255px] ml-auto h-full transition-transform duration-200;
 
-    li {
-      @apply transition-colors duration-200 hover:text-primary-light-coral;
-    }
 
     #btn-close-nav {
       display: block;

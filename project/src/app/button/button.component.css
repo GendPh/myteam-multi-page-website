@@ -17,7 +17,7 @@
   }
 
   &.primary-dark {
-    @apply bg-primary-white text-secondary-dark-green hover:bg-secondary-dark-green hover:text-primary-white relative border-0;
+    @apply bg-transparent text-secondary-dark-green hover:bg-secondary-dark-green hover:text-primary-white relative border-0;
     &::after{
       content: '';
       position: absolute;

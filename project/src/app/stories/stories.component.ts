@@ -1,20 +1,22 @@
 import { AfterViewInit, Component, ElementRef, Input, OnDestroy } from '@angular/core';
-import { Skill } from '../home/home.component';
+import { Story } from '../home/home.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-skills',
+  selector: 'app-stories',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.css'], // Ensure correct plural 'styleUrls'
+  templateUrl: './stories.component.html',
+  styleUrl: './stories.component.css'
 })
-export class SkillsComponent implements AfterViewInit, OnDestroy {
-  @Input("Skill") skill: Skill = { // Corrected "Skill" to "skill"
-    icon: 'icon-person',
-    title: 'Experienced Individuals',
-    desc: 'Our network is made up of highly experienced professionals who are passionate about what they do.'
+export class StoriesComponent implements OnDestroy, AfterViewInit {
+  @Input("Story") public story: Story = {
+    name: 'Kady Baker',
+    position: 'Product Manager at Bookmark',
+    image: 'kady',
+    quote: '“The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned.”'
   };
+
 
   public isInViewport = false;
 

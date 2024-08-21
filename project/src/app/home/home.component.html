@@ -1,12 +1,15 @@
+<!-- 
+ Hero Section
+-->
 <section class="overflow-hidden relative">
-
-
   <figure id="home-patter-1" class="hidden xl:block absolute right-full translate-x-1/2">
     <img src="../../assets/pattern/bg-pattern-home-1.svg" alt="circle with points squares"
       class="w-full h-full object-contain">
   </figure>
 
+  <!-- Component that will show for default the find talent section -->
   <app-hero-section />
+  <!-- End component -->
 
   <div class="relative w-full h-[100px] mt-[197px] md:mt-[256px] lg:mt-[250px] desktop-max-screen">
     <figure class="absolute bottom-0 left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:right-0 w-[358px]">
@@ -15,10 +18,15 @@
     </figure>
   </div>
 </section>
+<!--
+End of Hero Section
+-->
 
 
+<!--
+Section about the Skills
+-->
 <section class="relative bg-secondary-dark-green px-6 xl:px-0 py-16 md:py-[100px] lg:py-[140px] overflow-hidden">
-
   <figure
     class="absolute top-0 right-0 xl:top-auto xl:bottom-0 translate-x-1/2 w-[200px] h-[240px] lg:h-[200px] xl:h-[240px]">
     <img src="../../assets/pattern/bg-pattern-home-3.svg" alt="circle with lines and a square with dots"
@@ -26,15 +34,63 @@
   </figure>
 
   <div class="max-w-[573px] lg:max-w-[1110px] mx-auto grid gap-14 md:gap-16  lg:grid-cols-2">
-    <article class="max-w-60 md:max-w-[445px]">
-      <div class="w-[50px] h-1 bg-primary-light-coral mb-8"></div>
-      <h2 class="header-2">Build & manage distributed teams like no one else.</h2>
+    <article id="skills-header" class="max-w-60 md:max-w-[445px]">
+      <div class="w-[50px] h-1 bg-primary-light-coral mb-8"
+        [ngClass]="{'animate__animated animate__bounceInRight':skillHeaderVisible,'opacity-0':!skillHeaderVisible}">
+      </div>
+      <h2 class="header-2"
+        [ngClass]="{'animate__animated animate__fadeInTopLeft':skillHeaderVisible,'opacity-0':!skillHeaderVisible}">
+        Build & manage
+        distributed teams like no
+        one else.</h2>
     </article>
 
+    <!-- Component will show all three skills defined in home.component.ts -->
     <article class="grid gap-12 md:gap-8">
       <app-skills *ngFor="let skill of skills" [Skill]="skill" />
     </article>
+    <!-- End component -->
   </div>
-
-
 </section>
+<!--
+End of Section about the Skills
+-->
+
+<!--
+Section about the Success Stories
+-->
+<section>
+  <figure class="block w-[147px] h-[100px] mb-10 md:mb-0 lg:mb-10">
+    <img src="../../assets/pattern/bg-pattern-home-4-about-3.svg" alt="square and 6 lines" class="w-full h-full">
+  </figure>
+
+  <article class="max-w-[573px] lg:max-w-[1110px] mx-auto" id="stories-header">
+    <h2 class="header-2 text-center px-8 md:px-12"
+      [ngClass]="{'animate__animated animate__flipInX':storiesHeaderVisible,'opacity-0':!storiesHeaderVisible}">
+      Delivering real results for top<br class="hidden lg:block">
+      companies. Some of our <span class="text-secondary-rapture-blue">success stories.</span></h2>
+
+    <!-- 
+    Component that will show all the stories defined in home.component.ts
+    -->
+    <div class="px-6 mt-12 lg:mt-14 grid gap-12 lg:gap-[30px] lg:grid-cols-3">
+      <app-stories *ngFor="let story of stories" [Story]="story" />
+    </div>
+    <!-- End component -->
+  </article>
+
+  <figure class="ml-auto mt-16 md:mt-0 lg:mt-10 block w-fit">
+    <img src="../../assets/pattern/bg-pattern-home-5.svg" alt="circle with 6 lines">
+  </figure>
+</section>
+<!--
+End of Section about the Success Stories
+-->
+
+<!-- 
+Section about the Start working with us
+-->
+<app-start />
+<!--
+End of Section about the Start working with us
+-->
