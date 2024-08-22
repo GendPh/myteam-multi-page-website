@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/stories/stories.component.css"],
+  "sourcesContent": [".story-avatar {\r\n  width: 62px;\r\n  height: 62px;\r\n  margin-inline: auto;\r\n  box-shadow: 0px 0px 0px 4px #c4fffe;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAC;AACC,SAAO;AACP,UAAQ;AACR,iBAAe;AACf,cAAY,IAAI,IAAI,IAAI,IAAI;AAC9B;",
+  "names": []
+}

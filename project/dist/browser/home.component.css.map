@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/home/home.component.css"],
+  "sourcesContent": ["#home-patter-1 {\r\n  --w: clamp(70px, 13vw, 600px);\r\n\r\n  width: var(--w);\r\n  height: var(--w);\r\n}\r\n"],
+  "mappings": ";AAAA,CAAC;AACC,OAAK,MAAM,IAAI,EAAE,IAAI,EAAE;AAEvB,SAAO,IAAI;AACX,UAAQ,IAAI;AACd;",
+  "names": []
+}
