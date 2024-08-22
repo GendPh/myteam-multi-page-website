@@ -1,4 +1,7 @@
-<!-- <section class="overflow-hidden">
+<!-- Page shows content about our company -->
+
+<!-- Section 1: Hero show what we do -->
+<section class="overflow-hidden">
 
   <div class="px-8 md:px-0 lg:pl-12 xl:pl-0">
     <app-hero-section [Header]="title" [HeaderSpan]="''" [Description]="desc" [HeaderSmall]="true" />
@@ -11,7 +14,7 @@
   </article>
 </section>
 
-
+<!-- Section 2: Meet our directors -->
 <section
   class="bg-secondary-deep-jungle-green px-6 landscape:pt-[100px] md:px-[97px] lg:px-20 py-[88px] md:py-[100px] lg:py-[140px] overflow-hidden relative">
 
@@ -25,9 +28,19 @@
     <img src="../../assets/pattern/bg-pattern-home-4-about-3.svg" alt="square and 6 lines">
   </figure>
 
-</section> -->
-
-<section>
-
-  
 </section>
+
+<!-- Section 3: Shows some of our clients logos -->
+<section class="bg-secondary-dark-green py-[88px] md:py-[100px] lg:py-[140px] text-center relative overflow-hidden">
+
+  <figure class="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 md:translate-x-0 lg:translate-y-0">
+    <img src="../../assets/pattern/bg-pattern-about-4.svg" alt="circle with lines and square dots">
+  </figure>
+
+  <app-client-section />
+</section>
+
+<!-- 
+Section 4: Show the Start working with us route
+-->
+<app-start />

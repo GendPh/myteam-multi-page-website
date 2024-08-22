@@ -1,0 +1,26 @@
+<form class="px-6 grid gap-6 body-text-1" #contactForm="ngForm" (submit)="onSubmit()">
+
+  <div class="form-input" [ngClass]="{'error': nameModel.invalid && nameModel.touched}">
+    <input required [(ngModel)]="details.name" type="text" name="name" id="name" placeholder="Name"
+      class="letter-spacing" #nameModel="ngModel">
+  </div>
+  <div class="form-input"
+    [ngClass]="{'error': emailModel.invalid && emailModel.touched, 'error fail-email':failedEmailValidation}">
+    <input required [(ngModel)]="details.email" type="email" name="email" id="email" placeholder="Email"
+      class="letter-spacing" #emailModel="ngModel">
+  </div>
+  <div class="form-input" [ngClass]="{'error': companyModel.invalid && companyModel.touched}">
+    <input required [(ngModel)]="details.company" type="text" name="company" id="company" placeholder="Company Name"
+      class="letter-spacing" #companyModel="ngModel">
+  </div>
+  <div class="form-input" [ngClass]="{'error': titleModel.invalid && titleModel.touched}">
+    <input required [(ngModel)]="details.title" type="text" name="title" id="title" placeholder="Title"
+      class="letter-spacing" #titleModel="ngModel">
+  </div>
+  <div class="form-input" [ngClass]="{'error': messageModel.invalid && messageModel.touched}">
+    <textarea required [(ngModel)]="details.message" name="message" id="message" rows="3" placeholder="Message"
+      #messageModel="ngModel"></textarea>
+  </div>
+
+  <button type="submit">submit</button>
+</form>

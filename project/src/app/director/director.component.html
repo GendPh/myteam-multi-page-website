@@ -1,8 +1,9 @@
+<!-- This component display of the individual director got from directors section and performs an entry animation -->
 <div class="director animate__animated"
   [ngClass]="{'open-back': descOpen, 'animate__bounceIn':isInViewport,'opacity-0':!isInViewport}">
 
   <div class="relative grid overflow-hidden">
-
+    <!-- this is the front where displays the name and position of the director -->
     <div class="col-start-1 row-start-1 relative z-0 animate__animated"
       [ngClass]="{'animate__bounceOutLeft': descOpen,'animate__bounceInLeft': !descOpen && firstClick != 0}">
       <figure class="w-24 h-24 rounded-full border-2 border-[#C4FFFE] mx-auto mb-4">
@@ -14,6 +15,7 @@
       <p class="body-text-3 big">{{director.position}}</p>
     </div>
 
+    <!-- this is the back where displays the name and description of the director -->
     <div class="col-start-1 row-start-1 relative z-10 animate__animated"
       [ngClass]="{'animate__bounceOutRight': firstClick != 0 && !descOpen,'animate__bounceInRight': descOpen, 'opacity-0': firstClick == 0}">
       <p class="body-text-1 bold text-secondary-rapture-blue">{{director.name}}</p>
@@ -34,9 +36,9 @@
       </div>
 
     </div>
-
   </div>
-
+  
+  <!-- this btn toggles the display between the front and back -->
   <button class="relative z-20 block p-[20px] rounded-full mx-auto mt-[28px]" (click)="toggleDesc()">
     <!-- svg cross -->
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">

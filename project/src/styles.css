@@ -39,6 +39,9 @@
 
   .header-2 {
     @apply text-[32px] leading-[32px] lg:text-[48px] lg:leading-[48px] font-bold;
+    .big-leading {
+      @apply leading-[48px];
+    }
   }
 
   .body-text-1 {
@@ -53,6 +56,10 @@
     &.small {
       font-size: 15px;
       line-height: 25px;
+    }
+
+    &.letter-spacing{
+      letter-spacing: -0.12px;
     }
   }
   .body-text-2 {

@@ -21,7 +21,6 @@ export class SkillsComponent implements AfterViewInit, OnDestroy {
   constructor(private elementRef: ElementRef) { }
 
   ngAfterViewInit() {
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

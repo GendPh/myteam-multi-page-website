@@ -1,0 +1,11 @@
+<!-- This article will display all our clients logos -->
+<article>
+  <h2 class="header-2 animate__animated" id="clientLogosHeader"
+    [ngClass]="{'opacity-0':!isInViewport, 'animate__fadeInUp': isInViewport}">Some of our clients</h2>
+
+    <!-- Displays the imgs of the clients logos -->
+  <figure
+    class="flex flex-col md:flex-row md:px-10 justify-center items-center gap-[57px] mt-16 md:mt-12 max-w-[162px] md:max-w-max lg:max-w-[1110px] mx-auto">
+    <app-client-logo *ngFor="let logo of clientLogos" [LogoName]="logo" />
+  </figure>
+</article>

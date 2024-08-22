@@ -1,5 +1,9 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
+#Env file
+.env
+/src/environments
+
 # Compiled output
 /tmp
 /out-tsc

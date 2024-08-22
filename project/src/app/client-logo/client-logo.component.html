@@ -1,0 +1,3 @@
+<!-- A component for the client section to display the images and perform the entry animations -->
+<img loading="lazy" class="w-full object-contain animate__animated" src="../../assets/logo/{{logoName}}.png"
+  alt="{{logoName}} logo" [ngClass]="{'opacity-0': !isInViewport, 'animate__jackInTheBox': isInViewport }">
