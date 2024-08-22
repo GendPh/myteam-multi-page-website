@@ -36,31 +36,35 @@ export class HomeComponent implements AfterViewInit {
   constructor(private elementRef: ElementRef) { }
 
   ngAfterViewInit(): void {
-    const skillHeaderEl: HTMLElement | null = document.getElementById('skills-header');
-    const storyHeaderEl: HTMLElement | null = document.getElementById('stories-header');
+ 
 
 
-    const observerSkill = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          this.skillHeaderVisible = true;
-          observerSkill.unobserve(skillHeaderEl!);
-        }
-      },
-      { threshold: 0.1 }
-    );
-    const observerStory = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          this.storiesHeaderVisible = true;
-          observerStory.unobserve(storyHeaderEl!);
-        }
-      },
-      { threshold: 0.1 }
-    );
+      const skillHeaderEl: HTMLElement | null = document.getElementById('skills-header');
+      const storyHeaderEl: HTMLElement | null = document.getElementById('stories-header');
 
-    observerSkill.observe(skillHeaderEl!);
-    observerStory.observe(storyHeaderEl!);
+
+      const observerSkill = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            this.skillHeaderVisible = true;
+            observerSkill.unobserve(skillHeaderEl!);
+          }
+        },
+        { threshold: 0.1 }
+      );
+      const observerStory = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            this.storiesHeaderVisible = true;
+            observerStory.unobserve(storyHeaderEl!);
+          }
+        },
+        { threshold: 0.1 }
+      );
+
+      observerSkill.observe(skillHeaderEl!);
+      observerStory.observe(storyHeaderEl!);
+   
   }
 
 

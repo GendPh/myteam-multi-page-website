@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MobileNavComponent } from '../mobile-nav/mobile-nav.component';
 import { ButtonComponent } from '../button/button.component';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 
 const bodyEl = document.querySelector('body');
@@ -8,7 +9,7 @@ const bodyEl = document.querySelector('body');
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [MobileNavComponent, ButtonComponent],
+  imports: [MobileNavComponent, ButtonComponent, RouterLink, RouterLinkActive],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

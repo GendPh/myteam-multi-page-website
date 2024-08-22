@@ -1,17 +1,16 @@
 <article
   class="text-center lg:text-start px-6 md:px-0 md:max-w-[457px] lg:max-w-[1110px] mx-auto flex flex-col lg:flex-row gap-[18px] md:gap-6 lg:gap-[30px]">
 
-  <h1 class="header-1 text-balance px-10 md:px-0"
-    [ngClass]="{'animate__animated animate__fadeInDown':isInViewport, 'opacity-0': !isInViewport}">
+  <h1 class="header-1 text-balance px-10 md:px-0 lg:min-w-[350px] block"
+    [ngClass]="{'animate__animated animate__fadeInDown':isInViewport, 'opacity-0': !isInViewport, 'small':headerSmall}">
     {{header}} <span class="text-primary-light-coral">{{headerSpan}}</span></h1>
 
-  <div class="flex flex-col justify-between max-w-[445px] mx-auto">
-    <div class="hidden lg:block w-[50px] h-1 bg-secondary-rapture-blue"
-      [ngClass]="{'animate__animated animate__bounceInRight':isInViewport, 'opacity-0': !isInViewport}"></div>
+  <div class="flex flex-col justify-between mx-auto max-w-[445px]" [ngClass]="{'xl:max-w-[730px]': !descSmall}">
+    <div class="hidden lg:block w-[50px] h-1 bg-secondary-rapture-blue mb-10"
+      [ngClass]="{'animate__animated animate__bounceInRight':isInViewport, 'opacity-0': !isInViewport}">
+    </div>
     <p class="body-text-2" [ngClass]="{'animate__animated animate__fadeInUp':isInViewport, 'opacity-0': !isInViewport}">
       {{description}}
     </p>
   </div>
-
-
 </article>

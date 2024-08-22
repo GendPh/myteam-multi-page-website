@@ -9,13 +9,14 @@
     </figure>
 
     <ul class="hidden md:flex items-center gap-10">
-      <li class="body-text-1">home</li>
-      <li class="body-text-1">about</li>
+      <li routerLink="" routerLinkActive="current" [routerLinkActiveOptions]="{exact: true}" class="body-text-1">
+        home</li>
+      <li routerLink="/about" routerLinkActive="current" class="body-text-1">about</li>
     </ul>
   </nav>
 
 
-  <app-button class="hidden md:block">Contact Us</app-button>
+  <app-button routerLink="/contact" class="hidden md:block">Contact Us</app-button>
 
   <button type="button" id="btn-open-nav" (click)="openNav()"></button>
 </header>

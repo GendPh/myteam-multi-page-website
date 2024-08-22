@@ -8,8 +8,9 @@
 
       <nav>
         <ul class="flex gap-6">
-          <li class="body-text-2">home</li>
-          <li class="body-text-2">about</li>
+          <li routerLink="" routerLinkActive="current" [routerLinkActiveOptions]="{exact:true}" class="body-text-2">home
+          </li>
+          <li routerLink="/about" routerLinkActive="current" class="body-text-2">about</li>
         </ul>
       </nav>
     </div>

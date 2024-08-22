@@ -12,7 +12,8 @@ export class HeroSectionComponent {
   @Input("Header") header: string = "Find the best";
   @Input("HeaderSpan") headerSpan: string = "talent";
   @Input("Description") description: string = "Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance of global talent. We’re about to change that.";
-
+  @Input("HeaderSmall") headerSmall: boolean = false;
+  @Input("DescSmall") descSmall: boolean = false;
 
   public isInViewport = false;
 

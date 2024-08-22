@@ -1,0 +1,18 @@
+<article class="text-center">
+
+  <h2 class="header-2 animate__animated"
+    [ngClass]="{'opacity-0':!isDirectorsHeaderInViewport, 'animate__zoomInRight':isDirectorsHeaderInViewport}"
+    id="directors-header">
+    Meet the directors</h2>
+
+
+
+  <div
+    class="mt-12 lg:mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-x-[11px] lg:gap-x-[30px] md:gap-y-12 desktop-max-screen">
+
+    <app-director *ngFor="let director of directors" [Director]="director" />
+
+  </div>
+
+
+</article>

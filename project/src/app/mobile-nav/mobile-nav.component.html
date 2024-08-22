@@ -5,11 +5,12 @@
 
 
     <ul>
-      <li class="body-text-1 mt-[39px]">home</li>
-      <li class="body-text-1 mt-6 mb-9">about</li>
+      <li routerLink="/" routerLinkActive="current" [routerLinkActiveOptions]="{exact:true}"
+        class="body-text-1 mt-[39px]">home</li>
+      <li routerLink="/about" routerLinkActive="current" class="body-text-1 mt-6 mb-9">about</li>
     </ul>
 
-    <app-button>
+    <app-button routerLink="/contact">
       contact us
     </app-button>
 

@@ -18,6 +18,9 @@
   li {
     cursor: pointer;
     @apply hover:text-primary-light-coral transition-colors duration-200;
+    &.current {
+      @apply text-primary-light-coral;
+    }
   }
 }
 
@@ -62,8 +65,9 @@
     line-height: 18px;
     font-weight: 500;
     font-style: italic;
+    &.big {
+      font-size: 15px;
+      line-height: 25px;
+    }
   }
-
-
 }
-
