@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { EmailService } from '../service/email.service';
+import { environment } from '../../environments/environment';
+import { BehaviorSubject } from 'rxjs';
 
 type FormDetails = {
   name: string;
@@ -31,9 +33,26 @@ export class ContactFormComponent {
     message: ""
   }
 
+  private myEmail = environment.myEmail;
   public failedEmailValidation = false;
 
-  constructor(private emailService: EmailService) { }
+
+  public sendingEmail: boolean = false;
+  public statusMessage: string = 'submit';
+  public emailSent: boolean = false;
+
+
+  constructor(private emailService: EmailService) {
+    this.emailService.sendingEmail$.subscribe((sending) => {
+      this.sendingEmail = sending;
+    });
+    this.emailService.statusMessage$.subscribe((status) => {
+      this.statusMessage = status;
+    });
+    this.emailService.emailSent$.subscribe((sent) => {
+      this.emailSent = sent;
+    });
+  }
 
   onSubmit() {
     // Iterate over the keys of the details object and trim the values
@@ -50,8 +69,15 @@ export class ContactFormComponent {
     if (!this.contactForm?.valid) {
       // Send the form details to the server
       console.log("invalid form");
+    } else {
+      this.emailService.sendEmail({
+        client_name: this.details.name,
+        client_email: this.details.email,
+        client_message: this.details.message,
+        destination_email: this.myEmail,
+      });
+
+      this.contactForm.resetForm();
     }
   }
-
-
 }

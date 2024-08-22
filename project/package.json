@@ -19,8 +19,10 @@
     "@angular/platform-browser": "^18.1.0",
     "@angular/platform-browser-dynamic": "^18.1.0",
     "@angular/router": "^18.1.0",
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "animate.css": "^4.1.1",
+    "emailjs-com": "^3.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

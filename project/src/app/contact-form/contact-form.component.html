@@ -22,5 +22,6 @@
       #messageModel="ngModel"></textarea>
   </div>
 
-  <button type="submit">submit</button>
+  <button type="submit"
+    [ngClass]="{'animation-FadeInOut':sendingEmail, 'opacity-25 pointer-events-none': emailSent}">{{statusMessage}}</button>
 </form>
