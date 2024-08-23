@@ -21,6 +21,7 @@ export type Director = {
 })
 export class DirectorsSectionComponent implements AfterViewInit {
 
+  // Array of objects containing the director details
   public directors: Array<Director> = [
     {
       name: "Nikita Marks",
@@ -60,12 +61,12 @@ export class DirectorsSectionComponent implements AfterViewInit {
     }
   ];
 
+  // Variable to determine if the directors header is in the viewport
   public isDirectorsHeaderInViewport: boolean = false;
 
   ngAfterViewInit(): void {
-
+    // This observer will check if the directors header is in the viewport of the user
     const directorsHeader: HTMLElement = document.querySelector('#directors-header') as HTMLElement;
-
     const observerDirectorHeader = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -75,7 +76,7 @@ export class DirectorsSectionComponent implements AfterViewInit {
       },
       { threshold: 0.1 }
     );
-
+    // The observer will observe the directors header element 
     observerDirectorHeader.observe(directorsHeader);
   }
 

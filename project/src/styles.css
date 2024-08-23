@@ -4,11 +4,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* Example of setting the variables */
-:root {
-  --speed: 500ms; /* Animation duration */
-  --delay: 700ms; /* Animation delay */
-}
 
 @layer base {
   body {

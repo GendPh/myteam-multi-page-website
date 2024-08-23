@@ -21,10 +21,10 @@ type FormDetails = {
   styleUrl: './contact-form.component.css'
 })
 export class ContactFormComponent {
-
+  // ViewChild decorator to get the form reference
   @ViewChild('contactForm') contactForm: NgForm | undefined;
 
-
+  // Form details object
   public details: FormDetails = {
     name: "",
     email: "",
@@ -33,16 +33,18 @@ export class ContactFormComponent {
     message: ""
   }
 
+  // Email address to send the form details
   private myEmail = environment.myEmail;
+  // Variable to determine if the email validation failed
   public failedEmailValidation = false;
-
-
+  // Variables to determine the email sending status
   public sendingEmail: boolean = false;
   public statusMessage: string = 'submit';
   public emailSent: boolean = false;
 
 
   constructor(private emailService: EmailService) {
+    // Subscribing to the email service observables
     this.emailService.sendingEmail$.subscribe((sending) => {
       this.sendingEmail = sending;
     });
@@ -60,24 +62,23 @@ export class ContactFormComponent {
       this.details[key] = this.details[key].trim();
     });
 
+    // Regular expression to validate the email
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-
+    // Check if the email is valid
     this.failedEmailValidation = emailRegex.test(this.details.email) ? false : true;
 
-
-    if (!this.contactForm?.valid) {
-      // Send the form details to the server
-      console.log("invalid form");
-    } else {
+    // Check if the form is valid
+    if (this.contactForm?.valid) {
+      // Send the email with the form details 
       this.emailService.sendEmail({
         client_name: this.details.name,
         client_email: this.details.email,
         client_message: this.details.message,
         destination_email: this.myEmail,
       });
-
-      this.contactForm.resetForm();
+      // Reset the form after sending the email
+      this.contactForm?.resetForm();
     }
   }
 }

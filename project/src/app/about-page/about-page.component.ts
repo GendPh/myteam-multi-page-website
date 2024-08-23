@@ -13,6 +13,7 @@ import { StartComponent } from '../start/start.component';
 })
 export class AboutPageComponent implements AfterViewInit {
   
+  /* This component when viewed will set to top and pass until is at top */
   ngAfterViewInit(): void {
     do {
       // Scroll to the top of the page
@@ -20,6 +21,7 @@ export class AboutPageComponent implements AfterViewInit {
     } while (window.scrollY !== 0);
   }
 
+  /* Pre Default Values */
   public title: string = "About";
   public desc: string = "We help companies build dynamic teams made up of top global talent. Using our network of passionate professionals we drive innovation and deliver incredible outcomes. Talented, diverse teams shape the best products and experiences. We’ll bring those teams to you.";
 }

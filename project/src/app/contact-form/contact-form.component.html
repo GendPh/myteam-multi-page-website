@@ -1,5 +1,7 @@
-<form class="px-6 grid gap-6 body-text-1" #contactForm="ngForm" (submit)="onSubmit()">
-
+<!-- 
+  This component is a form that allows users to send an email to the company.
+-->
+<form class="px-6 md:px-0 grid gap-6 body-text-1 " #contactForm="ngForm" (submit)="onSubmit()">
   <div class="form-input" [ngClass]="{'error': nameModel.invalid && nameModel.touched}">
     <input required [(ngModel)]="details.name" type="text" name="name" id="name" placeholder="Name"
       class="letter-spacing" #nameModel="ngModel">

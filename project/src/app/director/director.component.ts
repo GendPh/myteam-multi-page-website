@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './director.component.css'
 })
 export class DirectorComponent implements AfterViewInit {
+  // Director object 
   @Input("Director") director: Director = {
     name: "Nikita Marks",
     position: "Founder & CEO",
@@ -17,14 +18,18 @@ export class DirectorComponent implements AfterViewInit {
     img: "nikita"
   };
 
+  // Variable to determine if the component is in the view of the user
   public isInViewport: boolean = false;
 
+  // Variables to determine if the description is open
   public descOpen: boolean = false;
   public firstClick: number = 0;
 
+  // Gets this component reference
   constructor(private elementRef: ElementRef) { }
 
   ngAfterViewInit(): void {
+    // This observer will check if the component is in the viewport of the user
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -38,6 +43,7 @@ export class DirectorComponent implements AfterViewInit {
     observer.observe(this.elementRef.nativeElement);
   }
 
+  // Method to toggle the description
   public toggleDesc() {
     if (this.firstClick === 0) {
       this.firstClick++;

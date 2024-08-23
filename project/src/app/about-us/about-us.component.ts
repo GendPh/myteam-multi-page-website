@@ -10,6 +10,7 @@ import { AboutUs } from '../contact-page/contact-page.component';
   styleUrl: './about-us.component.css'
 })
 export class AboutUsComponent {
+  /* Pre default value */
   @Input("Us") aboutUs: AboutUs = {
     description: "The quality of our talent network",
     image: "icon-person"

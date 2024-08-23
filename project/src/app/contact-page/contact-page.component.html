@@ -1,20 +1,29 @@
 <!-- This Page will display the contact form of email -->
 
-<section class="grid gap-14 pb-[88px] relative overflow-hidden">
-  <!-- <article class="text-center">
-    <h1 class="header-1 small">Contact</h1>
-    <h2 class="header-2 big-leading mt-4 text-primary-light-coral">Ask us about</h2>
+<section class="relative overflow-hidden">
+  <figure class="hidden md:block absolute left-0 -translate-x-1/2 xl:w-[170px]">
+    <img src="../../assets/pattern/bg-pattern-about-2-contact-1.svg" alt="circles and squares and lines" class="w-full">
+  </figure>
 
-    <div class="px-6 mt-10 grid gap-6">
-      <app-about-us *ngFor="let us of aboutUs" [Us]="us" />
-    </div>
-  </article> -->
+  <div class="grid lg:grid-cols-2 gap-14 lg:gap-[30px] pb-[88px] md:pb-[112px] lg:pb-[120px] desktop-max-screen">
 
-  <article>
-    <app-contact-form />
-  </article>
+    <article class="text-center xl:text-start relative lg:pl-6 xl:px-0">
+      <div class="max-w-[515px] lg:max-w-max mx-auto xl:mx-0">
+        <h1 class="header-1 small">Contact</h1>
+        <h2 class="header-2 big-leading mt-4 text-primary-light-coral">Ask us about</h2>
 
-  <figure class="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2">
+        <div class="px-6 xl:px-0 mt-10 grid gap-6">
+          <app-about-us *ngFor="let us of aboutUs" [Us]="us" />
+        </div>
+      </div>
+    </article>
+
+    <article class="md:w-[515px] lg:w-[540px] lg:pr-6 xl:px-0 md:mx-auto relative z-10">
+      <app-contact-form />
+    </article>
+  </div>
+
+  <figure class="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 md:translate-y-0">
     <img src="../../assets/pattern/bg-pattern-contact-2.svg" alt="two circles and a square">
   </figure>
 </section>

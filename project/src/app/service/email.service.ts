@@ -15,11 +15,11 @@ export interface emailMessage {
   providedIn: 'root'
 })
 export class EmailService {
-
+  // EmailJS API key, service ID and template ID
   private apiKey = environment.apiKey;
   private sKey = environment.service_id;
   private tKey = environment.template_id;
-
+  // Observables to determine the email sending status
   private sendingEmail: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   public sendingEmail$ = this.sendingEmail.asObservable();
 
@@ -31,7 +31,8 @@ export class EmailService {
 
   constructor() { }
 
-  initEmail(): boolean {
+  // Method to initialize the EmailJS
+  private initEmail(): boolean {
     try {
       if (!this.apiKey) {
         return false;
@@ -44,14 +45,14 @@ export class EmailService {
       return false;
     }
   }
-
+  // Method to send the email
   sendEmail(template: emailMessage) {
-
+    // Set the sending email status to true
     this.sendingEmail.next(true);
     this.statusMessage.next('sending');
-
+    // Initialize the EmailJS
     const ini = this.initEmail();
-
+    // If the initialization fails, set the sending email status to false and the status message to error
     if (!ini) {
       this.sendingEmail.next(false);
       this.statusMessage.next('error');
@@ -61,23 +62,25 @@ export class EmailService {
     // Sanitize the input to prevent XSS attacks
     const sanitizeTemplate: Record<string, unknown> = this.sanitizeInput(template) as Record<string, unknown>;
 
-
-
+    // Send the email
     emailjs.send(this.sKey, this.tKey, sanitizeTemplate).then(
       (resp) => {
+        // If the email is sent successfully, set the status message to success and the email sent status to true
         this.statusMessage.next('success');
         this.emailSent.next(true);
       },
       (err) => {
+        // If the email sending fails, set the status message
         this.statusMessage.next('failed');
       },
     ).finally(() => {
+      // Set the sending email status to false
       this.sendingEmail.next(false);
     }
     );
   }
 
-
+  // Method to sanitize the input
   private sanitizeInput(template: emailMessage) {
     return {
       client_name: template.client_name.replace(/<[^>]*>?/gm, ''),

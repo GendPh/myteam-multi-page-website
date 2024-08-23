@@ -18,7 +18,7 @@ export type AboutUs = {
 })
 export class ContactPageComponent implements AfterViewInit {
 
-
+  // Array of objects containing the about us section details
   public aboutUs: Array<AboutUs> = [
     {
       description: "The quality of our talent network",
@@ -34,7 +34,7 @@ export class ContactPageComponent implements AfterViewInit {
     }
   ];
 
-
+  // Method to scroll to the top of the page after the view is initialized
   ngAfterViewInit(): void {
     do {
       window.scrollTo(0, 0);

@@ -3,7 +3,7 @@
 
   input,
   textarea {
-    @apply bg-transparent px-[14px] pb-4 border-b border-primary-white outline-none w-full transition-colors duration-200;
+    @apply bg-transparent px-[14px] pb-4 border-b border-primary-white outline-none w-full transition-colors duration-200 focus:placeholder:text-white;
   }
 
   &.error {
