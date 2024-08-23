@@ -37,6 +37,10 @@ export class HomeComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
 
+    // Set the page title to "Home"
+    document.title = "Home";
+
+
     do {
       // Scroll to the top of the page
       window.scrollTo(0, 0);

@@ -36,6 +36,8 @@ export class ContactPageComponent implements AfterViewInit {
 
   // Method to scroll to the top of the page after the view is initialized
   ngAfterViewInit(): void {
+    // Set the page title to "Contact Us"
+    document.title = "Contact Us";
     do {
       window.scrollTo(0, 0);
     } while (window.scrollY !== 0);

@@ -15,6 +15,8 @@ export class AboutPageComponent implements AfterViewInit {
   
   /* This component when viewed will set to top and pass until is at top */
   ngAfterViewInit(): void {
+    // Set the page title to "About Us"
+    document.title = "About Us";
     do {
       // Scroll to the top of the page
       window.scrollTo(0, 0);

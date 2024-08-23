@@ -2,7 +2,6 @@
 
 #Env file
 .env
-/src/environments
 
 # Compiled output
 /tmp
