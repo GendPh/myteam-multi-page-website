@@ -10,6 +10,16 @@
     font-family: 'Livvic', sans-serif;
     @apply bg-primary-midnight-green text-primary-white overflow-x-hidden;
   }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #014e56 inset !important;
+    box-shadow: 0 0 0 30px #014e56 inset !important;
+    -webkit-text-fill-color: white !important;
+  }
+
   li {
     cursor: pointer;
     @apply hover:text-primary-light-coral transition-colors duration-200;
